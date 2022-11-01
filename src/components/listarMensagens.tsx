@@ -14,7 +14,7 @@ interface Props {
 const listarMesagens: React.FC<Props> = (props) => {
 
   return (
-    <>
+    <div >
       <div className='header'>
         <Button variant="contained" onClick={props.handleSairrAutor}>
         {props.autorMsg} &nbsp;
@@ -25,16 +25,17 @@ const listarMesagens: React.FC<Props> = (props) => {
         </Button>
       </div>
 
-      <div  style={{paddingBottom:'2px', paddingTop:'2px'}}>
+      <div className='chatbody' style={{paddingBottom:'2px', paddingTop:'2px'}}>
 
         {props.mensagens?.map((i: IMensagem) => (
-          <div>
-            {i.idAutor === props.idAutor && <div style={{ textAlign: i.autor === props.autorMsg ? 'end' : 'start' }}>
+          <div className='scroller'>
+            {i.idAutor === props.idAutor && 
+            <div className={i.autor !== props.autorMsg ? 'me' : 'bot'}  style={{ textAlign: i.autor === props.autorMsg ? 'end' : 'start' }}>
               <p><strong>{i.autor}</strong><br></br>  
               {i.mensagem.split("\n").map(msg =>(
                 <>
                 {msg}
-                <br></br>
+                {i.mensagem.split("\n").at(-1) !== msg && <br></br>}
                 </>
               ))}
                 {new Date(i.data).toLocaleTimeString()}</p>
@@ -47,7 +48,7 @@ const listarMesagens: React.FC<Props> = (props) => {
         ))}
 
       </div>
-    </>
+    </div>
   );
 }
 

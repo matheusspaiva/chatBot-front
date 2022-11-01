@@ -107,7 +107,7 @@ function App() {
 
             {autorMsg.length > 0 && <div className="App">
                 <div>
-                    <div style={{ backgroundColor: "lightblue", textAlign: "center", margin: "40px", border: '1px solid black', borderRadius: '6px' }}>
+                    <div className='container' >
 
                         <ListarMesagens handleLimparConversa={handleLimparConversa} idAutor={id!} getNumber={handleGetNumeroUser} handleSairrAutor={handleSairrAutor} mensagens={mensagens!} autorMsg={autorMsg}/>
                         <SendMensage texto={texto!} setTexto={setTexto} handleAdicionarMsg={handleAdicionarMsg}/>
