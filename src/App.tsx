@@ -39,10 +39,11 @@ function App() {
         setTimeout(()=>{
 
             const objDiv = document.getElementById("chatbox");
-            if(!objDiv) return
+            const objDiv2 = document.getElementById("formulario");
+            if(!objDiv || !objDiv2) return
             var heightPage =objDiv.scrollHeight  //document.body.scrollHeight;
-            // objDiv?.scrollTo
             console.log(heightPage)
+            objDiv2.style.bottom = '0'
             objDiv.scrollTo(0 , heightPage);
         }, 1)
     })
@@ -110,12 +111,9 @@ function App() {
             {autorMsg.length > 0 && 
             <div className="container">
                     <div id='chatbox' >
-
                         <ListarMesagens handleLimparConversa={handleLimparConversa} idAutor={id!} getNumber={handleGetNumeroUser} handleSairrAutor={handleSairrAutor} mensagens={mensagens!} autorMsg={autorMsg}/>
-                        
-                        <SendMensage texto={texto!} setTexto={setTexto} handleAdicionarMsg={handleAdicionarMsg}/>
-
                     </div>
+                    <SendMensage texto={texto!} setTexto={setTexto} handleAdicionarMsg={handleAdicionarMsg}/>
             </div>
             }
         </>
