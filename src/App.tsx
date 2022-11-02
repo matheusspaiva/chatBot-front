@@ -35,13 +35,15 @@ function App() {
     socket?.on('listaMensagens', msgs => {
         if (autorMsg.length > 0) {
             setMensagens(msgs)
-            //window.scroll(0, -1)
-            //window.screen
         }
         setTimeout(()=>{
-            var heightPage = document.body.scrollHeight;
+
+            const objDiv = document.getElementById("chatbox");
+            if(!objDiv) return
+            var heightPage =objDiv.scrollHeight  //document.body.scrollHeight;
+            // objDiv?.scrollTo
             console.log(heightPage)
-            window.scrollTo(0 , heightPage+200);
+            objDiv.scrollTo(0 , heightPage);
         }, 1)
     })
 
@@ -88,7 +90,7 @@ function App() {
                 const MensagemWhats = prompt('Digite uma mensagem para ser enviada para whatsApp')!
                 //await axios.get(`https://api.whatsapp.com/send?phone=5511995695501&text=111`)
                 window.open(`https://api.whatsapp.com/send?phone=55${originalText}&text=${MensagemWhats}`)
-                alert(response.resultado)
+                //alert(response.resultado)
             }
         }
         catch(erro){
@@ -105,17 +107,17 @@ function App() {
                 <Login valueAutor={valueAutor} setValueAutor={setValueAutor} numeroTel={numeroTel} setNumeroTel={setNumeroTel} handleAdicionarAutor={handleAdicionarAutor} />
             }
 
-            {autorMsg.length > 0 && <div className="App">
-                <div>
-                    <div className='container' >
+            {autorMsg.length > 0 && 
+            <div className="container">
+                    <div id='chatbox' >
 
                         <ListarMesagens handleLimparConversa={handleLimparConversa} idAutor={id!} getNumber={handleGetNumeroUser} handleSairrAutor={handleSairrAutor} mensagens={mensagens!} autorMsg={autorMsg}/>
+                        
                         <SendMensage texto={texto!} setTexto={setTexto} handleAdicionarMsg={handleAdicionarMsg}/>
 
                     </div>
-
-                </div>
-            </div>}
+            </div>
+            }
         </>
     );
 }
