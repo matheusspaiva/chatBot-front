@@ -10,3 +10,11 @@
 # Funcionamento
 
 ## Funções do chatBot
+
+            1 - Produtos
+            2 - Locais de venda
+            3 - Qual seu nome?
+            4 - comprar 
+            5 - Historico de compras
+            6 - Quem somos nós
+            7 - Entre em contato
