@@ -14,7 +14,7 @@
 ### 1 - Produtos
   Retorna uma lista de produtos dispoivel no estabelecimento para vender mostrando as seguntes informações a identificação do produto , o nome dele e seu preço
 ### 2 - Locais de venda
-**** Retorna uma lista de produtos
+****Retorna uma lista de produtos
 ### 3 - Qual seu nome?
 ### 4 - comprar 
 ### 5 - Historico de compras
