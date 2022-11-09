@@ -12,7 +12,7 @@
 ## Funções do chatBot
 
 ### 1 - Produtos
-      Retorna uma lista de produtos dispoivel no estabelecimento para vender mostrando as seguntes informações a identificação do produto , o nome dele e seu preço.
+	Retorna uma lista de produtos dispoivel no estabelecimento para vender mostrando as seguntes informações a identificação do produto , o nome dele e seu preço.
 ### 2 - Locais de venda
 Retorna uma lista de todos os estabelecimentos para a retirada do produto.
 ### 3 - Qual seu nome?
