@@ -90,7 +90,7 @@ function App() {
                 console.log(originalText)
                 const MensagemWhats = prompt('Digite uma mensagem para ser enviada para whatsApp')!
                 //await axios.get(`https://api.whatsapp.com/send?phone=5511995695501&text=111`)
-                window.open(`https://api.whatsapp.com/send?phone=55${originalText}&text=${MensagemWhats}`)
+                window.open(`https://api.whatsapp.com/send?phone=${originalText}&text=${MensagemWhats}`)
                 //alert(response.resultado)
             }
         }
