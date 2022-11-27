@@ -25,5 +25,5 @@ Registra todas as compras feita pelo usuario, informando o valor total da compra
 Retorna uma breve informação sobre a loja
 ### 7 - Entre em contato
 Ultilizamos uma api para realizar a integração q vai ser feita por whatsApp 
-A api em questão é a `https://wa.me/NUMBER?text=TEXT_SEND` onde o `NUMBER` é o numero em que vai se mandar a mensagem e o `TEXT_SEND` é o conteudo da mensagem 
+A api em questão é a `https://api.whatsapp.com/send?phone=NUMBER&text=TEXT_SEND` onde o `NUMBER` é o numero em que vai se mandar a mensagem e o `TEXT_SEND` é o conteudo da mensagem 
 Vale relembrar que por motivos de segurança quando o numero é chamado do back para o front ele sofre uma encriptação

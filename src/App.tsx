@@ -87,9 +87,8 @@ function App() {
             }else{
                 const bytes  = CryptoJS.AES.decrypt(response.resultado, 'hash123');
                 const originalText = bytes.toString(CryptoJS.enc.Utf8);
-                console.log(originalText)
                 const MensagemWhats = 'Ola'
-                window.open(`https://wa.me/${originalText}?text=${MensagemWhats}`)
+                window.open(`https://api.whatsapp.com/send?phone=${originalText}&text=${MensagemWhats}`)
                 //alert(response.resultado)
             }
         }
