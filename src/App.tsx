@@ -88,9 +88,8 @@ function App() {
                 const bytes  = CryptoJS.AES.decrypt(response.resultado, 'hash123');
                 const originalText = bytes.toString(CryptoJS.enc.Utf8);
                 console.log(originalText)
-                const MensagemWhats = prompt('Digite uma mensagem para ser enviada para whatsApp')!
-                //await axios.get(`https://api.whatsapp.com/send?phone=5511995695501&text=111`)
-                window.open(`https://api.whatsapp.com/send?phone=${originalText}&text=${MensagemWhats}`)
+                const MensagemWhats = 'Ola'
+                window.open(`https://wa.me/${originalText}?text=${MensagemWhats}`)
                 //alert(response.resultado)
             }
         }
