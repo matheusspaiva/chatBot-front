@@ -14,7 +14,7 @@ const login: React.FC<Props> = (props) => {
   return (
     <div style={{display:'block', textAlign: "center"}}>
       <div>
-      <TextField variant="standard" label="* Nome de Usuario" value={props.valueAutor} onChange={(e) => props.setValueAutor(e.target.value as string)} />
+      <TextField autoFocus={true} variant="standard" onKeyDown={(e)=> {if(e.code==="Enter" || e.code==="NumpadEnter") props.handleAdicionarAutor()}} label="* Nome de Usuario" value={props.valueAutor} onChange={(e) => props.setValueAutor(e.target.value as string)} />
     </div>
     <div style={{display:'block', marginBottom:'2px'}}>
       {false && <TextField variant="standard" label="Numero de telefone" placeholder='11999999999 (opcional)' value={props.numeroTel} onChange={(e) => props.setNumeroTel(e.target.value as string)} />}
