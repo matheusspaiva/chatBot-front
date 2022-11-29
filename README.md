@@ -9,6 +9,10 @@
 
 # Funcionamento
 
+##Breve apresentaçãp
+
+Somos uma pequena empresa que vende aparelhos eltronicos e esse chatBot foi criado com o intuito de ajudar nossos clientes com algumas ferramentas que o bot disponibiliza
+
 ## Funções do chatBot
 
 ### 1 - Produtos
