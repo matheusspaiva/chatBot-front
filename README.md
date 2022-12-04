@@ -4,12 +4,12 @@
 ### - Instala todas as dependencias que o projeto tem
 
 ## `npm run start`
-### - Executa de fato a interface do Chat BOt
+### - Executa de fato a interface do Chat bot
 
 
 # Funcionamento
 
-## Breve apresentaçãp
+## Breve apresentação
 
 Somos uma pequena empresa que vende aparelhos eltronicos e esse chatBot foi criado com o intuito de ajudar nossos clientes com algumas ferramentas que o bot disponibiliza
 
